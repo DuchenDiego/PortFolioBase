@@ -26,44 +26,66 @@
               </h2>
               <div class="social">
                 <img src="@/assets/img/gitHub.svg" />
-                <a href="https://github.com/DuchenDiego" style="color: #b629a0">@DuchenDiego</a>
+                <a href="https://github.com/DuchenDiego" style="color: #b629a0"
+                  >@DuchenDiego</a
+                >
               </div>
               <div class="social">
                 <img src="@/assets/img/linkedin.svg" />
                 <a
                   href="https://www.linkedin.com/in/BradDiegoDuchen"
                   style="color: #0a81ab"
-                >in/BradDiegoDuchen</a>
+                  >in/BradDiegoDuchen</a
+                >
               </div>
               <div class="social">
                 <img src="@/assets/img/gmail.svg" />
                 <a style="color: #f73131">brad.duchen@gmail.com</a>
               </div>
             </div>
-            <div id="wrapper">
+            <!-- <div id="wrapper">
               <div id="wrapper-inner">
                 <div id="scroll-down">
                   <span class="arrow-down"></span>
                 </div>
               </div>
-            </div>
-            <form @submit.prevent="sendEmail" class="form">
-              <input v-model="From" name="fromName" type="text" placeholder="Empresa" />
-              <input v-model="FromEmail" name="fromEmail" type="text" placeholder="Email" />
-              <textarea v-model="Message" name="message" placeholder="Asunto"></textarea>
+            </div> -->
+            <!-- <form @submit.prevent="sendEmail" class="form"> -->
+            <form class="form">
+              <input
+                v-model="From"
+                name="fromName"
+                type="text"
+                placeholder="Empresa"
+              />
+              <input
+                v-model="FromEmail"
+                name="fromEmail"
+                type="text"
+                placeholder="Email"
+              />
+              <textarea
+                v-model="Message"
+                name="message"
+                placeholder="Asunto"
+              ></textarea>
               <input @click="sendEmail" type="submit" value="Enviar" />
             </form>
           </div>
         </div>
       </div>
     </div>
-    <div :class="popUpClass">
+    <!-- <div :class="popUpClass">
       <div class="modal-background"></div>
       <div class="modal-content">
         <article class="message is-dark">
           <div class="message-header">
             <p>ENVIO DE CORREO</p>
-            <button class="delete" @click="closePopUp" aria-label="delete"></button>
+            <button
+              class="delete"
+              @click="closePopUp"
+              aria-label="delete"
+            ></button>
           </div>
           <div class="message-body">
             <div class="correoNotif">
@@ -72,12 +94,16 @@
                 <br />
                 <b>El correo se envío con la información proporcionada</b>
               </h1>
-              <img src="@/assets/img/email.svg" width="100em" style="margin-left: 1%" />
+              <img
+                src="@/assets/img/email.svg"
+                width="100em"
+                style="margin-left: 1%"
+              />
             </div>
           </div>
         </article>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -101,12 +127,12 @@ export default class ContactForm extends vue {
     emailjs
       .sendForm(this.serviceID, this.templateID, e.target, this.userID)
       .then(
-        result => {
+        (result) => {
           console.log("Correo Enviado!", result.status, result.text);
           this.cleanForm();
           this.showPopUpCorreo();
         },
-        error => {
+        (error) => {
           console.log("Error al enviar Correo", error);
           this.cleanForm();
         }
@@ -143,7 +169,7 @@ export default class ContactForm extends vue {
   padding: 2em;
   background: #333333;
   color: #c2d1da;
-  height: 500vh;
+  height: 200vh;
   font-family: "Share Tech Mono", monospace;
 }
 

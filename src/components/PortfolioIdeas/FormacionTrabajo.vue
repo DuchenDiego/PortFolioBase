@@ -1,5 +1,7 @@
 <template>
   <div class="cuerpo">
+    <br /><br /><br /><br /><br /><br />
+    <br /><br /><br />
     <div class="timeline">
       <div class="TimestampCont">FORMACION</div>
       <div class="container left">
@@ -8,8 +10,7 @@
           <div class="bodyContent">
             <img src="@/assets/img/CBALogo.png" width="200" />
             <p v-scrollanimation>
-              <br />CBA English
-              <br />Proficiency Certificate
+              <br />CBA English <br />Proficiency Certificate
             </p>
           </div>
         </div>
@@ -18,9 +19,7 @@
         <div class="content" v-scrollanimation>
           <div class="bodyContent">
             <h2>2013</h2>
-            <p v-scrollanimation>
-              <br />Bachiller en Humanidades IDEB
-            </p>
+            <p v-scrollanimation><br />Bachiller en Humanidades IDEB</p>
             <img src="@/assets/img/IDEBLogo.png" width="150" />
           </div>
         </div>
@@ -43,12 +42,13 @@
     <div class="timeline">
       <div class="TimestampCont">EXPERIENCIA PROFESIONAL</div>
       <div class="container right">
-        <div class="content" v-scrollanimation:top="{ cssClassBefore: 'before-enter'}">
+        <div
+          class="content"
+          v-scrollanimation:top="{ cssClassBefore: 'before-enter' }"
+        >
           <h2 style="text-align:left;">2019-Presente</h2>
           <div class="bodyContent">
-            <p v-scrollanimation>
-              <br />Desarrollador de Software
-            </p>
+            <p v-scrollanimation><br />Desarrollador de Software</p>
             <img
               style="border-radius:80%; margin-left:3%"
               src="@/assets/img/AlphaSystemsLogo.png"
@@ -75,9 +75,9 @@ import Component from "vue-class-component";
       // Definición de directiva
       inserted: function(el) {
         el.classList.add("prueba");
-      }
-    }
-  }
+      },
+    },
+  },
 })
 export default class FormacionTrabajo extends vue {}
 </script>
@@ -87,7 +87,7 @@ export default class FormacionTrabajo extends vue {}
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
 .cuerpo {
   background: #333333;
-  height: 500vh;
+  height: 240vh;
 }
 /* The actual timeline (the vertical ruler) */
 .timeline {

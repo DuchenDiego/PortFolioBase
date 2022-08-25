@@ -7,16 +7,38 @@
         <div class="slide-track">
           <div class="slide"></div>
           <div class="slide">
-            <img src="@/assets/img/javascript-logo.svg" height="50" width="85" alt />
+            <img
+              src="@/assets/img/javascript-logo.svg"
+              height="50"
+              width="85"
+              alt
+            />
+            <p class="description">Javascript</p>
           </div>
           <div class="slide">
-            <img src="@/assets/img/csharplogo.png" height="50" width="100" alt />
+            <img src="@/assets/img/csharplogo.png" height="50" width="80" alt />
+            <p class="description">C#</p>
+          </div>
+          <div class="slide">
+            <img
+              src="@/assets/img/pythonlogo.png"
+              height="50"
+              width="100"
+              alt
+            />
+            <p class="description">Python</p>
           </div>
           <div class="slide">
             <img src="@/assets/img/javalogo.png" height="50" width="90" alt />
+            <p class="description">Java</p>
           </div>
           <div class="slide">
             <img src="@/assets/img/phplogo.png" height="50" width="180" alt />
+            <p class="description">PHP</p>
+          </div>
+          <div class="slide">
+            <img src="@/assets/img/dart.png" height="50" width="100" alt />
+            <p class="description">Dart</p>
           </div>
           <div class="slide"></div>
 
@@ -39,9 +61,7 @@
       <h3 class="subtitle_L">
         <span class="material-icons">arrow_back</span>
         Mayor Dominio de izquierda, menor hacia derecha
-        <span
-          class="material-icons"
-        >arrow_forward</span>
+        <span class="material-icons">arrow_forward</span>
       </h3>
     </div>
     <div class="rowSlider_R">
@@ -49,7 +69,13 @@
       <div class="sliderTwo">
         <div class="slide-track">
           <div class="slide">
-            <img src="@/assets/img/vuejs-logo.svg" height="80" width="100" alt />
+            <img
+              src="@/assets/img/vuejs-logo.svg"
+              height="80"
+              width="100"
+              alt
+            />
+            <p class="description">Vue</p>
           </div>
           <div class="slide">
             <img
@@ -59,9 +85,20 @@
               alt
               style="border-radius:50%"
             />
+            <p class="description">.Net Framework / Core</p>
           </div>
           <div class="slide">
-            <img src="@/assets/img/laravelogo.svg" height="50" width="220" alt />
+            <img
+              src="@/assets/img/laravelogo.svg"
+              height="50"
+              width="220"
+              alt
+            />
+            <p class="description">Laravel</p>
+          </div>
+          <div class="slide">
+            <img src="@/assets/img/odoologo.png" height="80" width="100" alt />
+            <p class="description">Odoo</p>
           </div>
           <div class="slide"></div>
         </div>
@@ -80,13 +117,21 @@
         <div class="slide-track">
           <div class="slide"></div>
           <div class="slide">
-            <img src="@/assets/img/sqlServerlogo.svg" height="100" width="130" alt />
+            <img
+              src="@/assets/img/sqlServerlogo.svg"
+              height="100"
+              width="130"
+              alt
+            />
+            <p class="description">MSSQL Server</p>
           </div>
           <div class="slide">
-            <img src="@/assets/img/mysqlLogo.png" height="50" width="200" alt />
+            <img src="@/assets/img/mysqlLogo.png" height="40" width="150" alt />
+            <p class="description">MySQL</p>
           </div>
           <div class="slide">
-            <img src="@/assets/img/mongodb.png" height="50" width="100" alt />
+            <img src="@/assets/img/pgsqllogo.png" height="50" width="100" alt />
+            <p class="description">PostgreSQL</p>
           </div>
           <div class="slide"></div>
         </div>
@@ -105,15 +150,29 @@
         <div class="slide-track">
           <div class="slide">
             <img src="@/assets/img/htmlCss.png" height="80" width="120" alt />
+            <p class="description">HTML + CSS</p>
           </div>
           <div class="slide">
             <img src="@/assets/img/sassLogo.png" height="50" width="100" alt />
+            <p class="description">Sass</p>
           </div>
           <div class="slide">
-            <img src="@/assets/img/vuetifyLogo.png" height="50" width="120" alt />
+            <img
+              src="@/assets/img/vuetifyLogo.png"
+              height="50"
+              width="120"
+              alt
+            />
+            <p class="description">Vuetify</p>
           </div>
           <div class="slide">
-            <img src="@/assets/img/bootstrapLogo.png" height="50" width="100" alt />
+            <img
+              src="@/assets/img/bootstrapLogo.png"
+              height="50"
+              width="150"
+              alt
+            />
+            <p class="description">Bootstrap</p>
           </div>
           <div class="slide"></div>
         </div>
@@ -121,14 +180,23 @@
     </div>
     <div class="rowSlider_C">
       <h2 class="title_C">TECNOLOGIAS DE INTERES</h2>
-      <h3 class="subtitle_C">Tecnologías que me generan curiosidad y me gustaría aprender más</h3>
+      <h3 class="subtitle_C">
+        Tecnologías que me generan curiosidad y me gustaría aprender más
+      </h3>
       <div class="sliderThree">
         <div class="slide-track">
           <div class="slide">
             <img src="@/assets/img/reactLogo.svg" height="80" width="120" alt />
+            <p class="description">React</p>
           </div>
           <div class="slide">
-            <img src="@/assets/img/nodejsLogo.svg" height="50" width="100" alt />
+            <img
+              src="@/assets/img/nodejsLogo.svg"
+              height="50"
+              width="100"
+              alt
+            />
+            <p class="description">NodeJs</p>
           </div>
           <div class="slide"></div>
         </div>
@@ -348,5 +416,9 @@ $contentRespawnR: 4;
     align-items: center;
     margin-left: 25%;
   }
+}
+.description {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1em;
 }
 </style>

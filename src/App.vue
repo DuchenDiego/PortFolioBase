@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link>|
       <router-link to="/about">About</router-link>|
       <router-link to="/flex">Flex1</router-link>|
@@ -18,7 +18,7 @@
       <button class="button" @click="redireccion('portfoliogrid')">Ir PorfolioGrid</button>
       <button class="button" @click="redireccion('contactform')">Ir ContactForm</button>
       <button class="button" @click="redireccion('aboutme')">Ir AboutMe</button>
-    </div>
+    </div> -->
     <router-view :key="$route.path"></router-view>
   </div>
 </template>
@@ -28,7 +28,7 @@ export default {
   methods: {
     redireccion(page) {
       if (page == "main") {
-        this.$router.push("/main").catch(error => {
+        this.$router.push("/main").catch((error) => {
           console.log(error);
         });
       } else if (page == "presentation") {
@@ -44,8 +44,8 @@ export default {
       } else if (page == "aboutme") {
         this.$router.push("aboutme");
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

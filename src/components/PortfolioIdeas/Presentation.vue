@@ -4,11 +4,11 @@
       <section class="animated fadeIn">
         <h1>brAd duchen</h1>
         <br />
-        <h2>[Frontend Developer]</h2>
+        <h2>[Fullstack Developer]</h2>
         <br />
         <h3>
           Desarrollo
-          <br />Mejora
+          <br />Mejora y
           <br />
           <p class="cursor">Apoyo Constante</p>
         </h3>
@@ -49,7 +49,7 @@ export default class Presentation extends vue {}
   padding: 0px;
   margin: 0px;
   width: 100%;
-  height: 100vh;
+  height: 170vh;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;

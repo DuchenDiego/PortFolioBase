@@ -3,37 +3,40 @@
     <div class="cuerpo">
       <div>
         <h1>PORTFOLIO</h1>
-        <h2>Proyectos relevantes en los que estuve involucrado total o parcialmente</h2>
+        <h2>
+          Proyectos relevantes en los que estuve involucrado total o
+          parcialmente
+        </h2>
       </div>
       <div class="first-grid">
-        <div class="project">
+        <div class="project" @click="popup(1)">
           <img src="@/assets/img/queue.jpg" class="image" alt />
-          <div class="middle">
+          <!-- <div class="middle">
             <div @click="popup(1)" class="text">
               <a style="color:white;">
                 <h3>VER DETALLES</h3>
               </a>
             </div>
-          </div>
+          </div> -->
           <span class="tooltip">Alpha-Queue</span>
         </div>
-        <div class="project">
+        <div class="project" @click="popup(2)">
           <img src="@/assets/img/dispatcher.jpg" alt />
           <span class="tooltip">Alpha-Dispatch</span>
         </div>
-        <div class="project">
+        <div class="project" @click="popup(3)">
           <img src="@/assets/img/efacturacion.jpg" alt />
           <span class="tooltip">Alpha-EBill</span>
         </div>
       </div>
       <div class="second-grid">
-        <div class="project">
+        <div class="project" @click="popup(4)">
           <img class="cropped" src="@/assets/img/pbx.jpg" alt />
           <span class="tooltip">Alpha-Stic</span>
         </div>
-        <div class="project">
-          <img src="@/assets/img/anxiety.jpg" alt />
-          <span class="tooltip">Sistema Experto Ansiedad</span>
+        <div class="project" @click="popup(5)">
+          <img src="@/assets/img/odoo.png" alt />
+          <span class="tooltip">ERP Odoo / Facturación Electrónica</span>
         </div>
       </div>
     </div>
@@ -41,15 +44,27 @@
       <div class="modal-background"></div>
       <div class="modal-card">
         <header class="modal-card-head">
-          <a style="color: #c2d1da;" v-if="showBackBtn" @click="goToMainModulePage">
+          <a
+            style="color: #c2d1da;"
+            v-if="showBackBtn"
+            @click="goToMainModulePage"
+          >
             <span class="material-icons">arrow_back</span>
           </a>
-          <p class="modal-card-title">ALPHA QUEUE</p>
-          <button class="delete" aria-label="close" @click="closePopup"></button>
+          <p class="modal-card-title">PROYECTO</p>
+          <button
+            class="delete"
+            aria-label="close"
+            @click="closePopup"
+          ></button>
         </header>
         <section class="modal-card-body">
           <div v-if="modalContent == 1" class="first-modal-grid">
-            <p>Sistema que permite el control, seguimiento y automatización de un proceso de encolamiento desde la obtención del ticket hasta la finalización del giro/transacción ó solicitud del cliente</p>
+            <p>
+              Sistema que permite el control, seguimiento y automatización de un
+              proceso de encolamiento desde la obtención del ticket hasta la
+              finalización del giro/transacción ó solicitud del cliente
+            </p>
             <img
               style="margin-left:15%; border-radius:80%"
               src="@/assets/img/AlphaSystemsLogo.png"
@@ -66,8 +81,8 @@
               <div class="boxTwo">
                 <b>Alpha Systems</b>
                 <b>Parcial</b>
-                <b>FrontEnd, BackEnd</b>
-                <b>.Net FW, Vue, Vuex, Axios, Vuetify, Leaflet</b>
+                <b>FrontEnd / BackEnd</b>
+                <b>C#, JS, .Net FW, Vue, Vuex, Axios, Vuetify, Leaflet</b>
                 <b>MSSQL Server</b>
               </div>
             </div>
@@ -88,32 +103,246 @@
               @click="moduloScaled = !moduloScaled"
               :aria-pressed="moduloScaled ? 'true' : 'false'"
             >
-              <p v-if="!moduloScaled">Agencia</p>
-              <img v-else src="@/assets/vueGif.gif" />
+              <p v-if="!moduloScaled">TicketVirtual</p>
+              <img v-else src="@/assets/DemoEticket.gif" />
+            </div>
+            <div>
+              <p v-if="!moduloScaled">Eliga un Módulo del Sistema</p>
+            </div>
+            <!-- <div>
+              <div v-if="!moduloScaled" class="modulo-item">Ticket Virtual</div>
+            </div>
+            <div>
+              <div v-if="!moduloScaled" class="modulo-item">Centralizador</div>
+            </div> -->
+            <!-- <div v-if="moduloScaled">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequuntur, est.
+            </div> -->
+            <!-- <div v-if="moduloScaled">
+              <div>
+                <a class="modulos" style="margin-left:50%">
+                  Demo
+                </a>
+                <a class="back" @click="moduloScaled = false">
+                  Volver
+                </a>
+              </div>
+            </div> -->
+          </div>
+          <div v-if="modalContent == 2" class="first-modal-grid">
+            <p>
+              Sistema Dispatching para control y seguimiento de personal para
+              atención a clientes (Soporte, Mantenimiento y Calidad)
+            </p>
+            <img
+              style="margin-left:15%; border-radius:80%"
+              src="@/assets/img/AlphaSystemsLogo.png"
+              alt="Empresa Alpha Systems"
+            />
+            <div>
+              <div class="boxOne">
+                <b>Empresa:</b>
+                <b>Intervención:</b>
+                <b>Rol Cumplido:</b>
+                <b>Tecnologías Empleadas:</b>
+                <b>Base de Datos:</b>
+              </div>
+              <div class="boxTwo">
+                <b>Alpha Systems</b>
+                <b>Parcial</b>
+                <b>FrontEnd</b>
+                <b>JS, Vue, Vuex, Axios, Vuetify</b>
+                <b>MSSQL Server</b>
+              </div>
+            </div>
+            <div>
+              <a class="modulos" @click="modalContent = 2.1">
+                VER MODULOS
+              </a>
+              <a class="back" @click="closePopup">
+                Volver
+              </a>
+            </div>
+          </div>
+          <div v-else-if="modalContent == 2.1" class="first-modal-subgrid">
+            <div
+              :class="scaleActive"
+              @click="moduloScaled = !moduloScaled"
+              :aria-pressed="moduloScaled ? 'true' : 'false'"
+            >
+              <p v-if="!moduloScaled">Cliente</p>
+              <img v-else src="@/assets/DemoDispatchClient.gif" />
             </div>
             <div>
               <p v-if="!moduloScaled">Eliga un Módulo del Sistema</p>
             </div>
             <div>
-              <div v-if="!moduloScaled" class="modulo-item">Ticket Virtual</div>
+              <!-- <div
+                :class="scaleActive"
+                @click="moduloScaled = !moduloScaled"
+                :aria-pressed="moduloScaled ? 'true' : 'false'"
+              >
+                <p v-if="!moduloScaled">Interno</p>
+                <img v-else src="@/assets/DemoDispatchInterno.gif" />
+              </div> -->
+              <div v-if="!moduloScaled" class="modulo-item">Interno</div>
+              <!-- <img v-else src="@/assets/DemoDispatchInterno.gif" /> -->
             </div>
             <div>
               <div v-if="!moduloScaled" class="modulo-item">Centralizador</div>
             </div>
-            <div
-              v-if="moduloScaled"
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, est.</div>
-            <div v-if="moduloScaled">
-              <div>
-                <a class="modulos" style="margin-left:50%">
-                  <!-- <span class="material-icons">developer_board</span> -->
-                  Demo
-                </a>
-                <a class="back" @click="moduloScaled = false">
-                  Volver
-                  <!-- <span class="material-icons">arrow_forward</span> -->
-                </a>
+          </div>
+          <div v-if="modalContent == 3" class="first-modal-grid">
+            <p>
+              Sistema de Facturación Electrónica diseñado para certificación de
+              modalidades Propia y Proveedor de acuerdo a la normativa del
+              Servicio de Impuestos Nacionales
+            </p>
+            <img
+              style="margin-left:15%; border-radius:80%"
+              src="@/assets/img/AlphaSystemsLogo.png"
+              alt="Empresa Alpha Systems"
+            />
+            <div>
+              <div class="boxOne">
+                <b>Empresa:</b>
+                <b>Intervención:</b>
+                <b>Rol Cumplido:</b>
+                <br />
+                <b>Tecnologías Empleadas:</b>
+                <br />
+                <b>Base de Datos:</b>
               </div>
+              <div class="boxTwo">
+                <b>Alpha Systems</b>
+                <b>Parcial</b>
+                <b>Backend / FrontEnd / Mobile/ Integración</b>
+                <b
+                  >Visual Basic, C#, .Net FW, Vue, Flutter, Vuex, Axios,
+                  Vuetify</b
+                >
+                <b>MSSQL Server</b>
+              </div>
+            </div>
+            <div>
+              <a class="modulos" @click="modalContent = 3.1">
+                VER MODULOS
+              </a>
+              <a class="back" @click="closePopup">
+                Volver
+              </a>
+            </div>
+          </div>
+          <div v-else-if="modalContent == 3.1" class="first-modal-subgrid">
+            <div
+              :class="scaleActive"
+              @click="moduloScaled = !moduloScaled"
+              :aria-pressed="moduloScaled ? 'true' : 'false'"
+            >
+              <p v-if="!moduloScaled">Portal Web</p>
+              <img v-else src="@/assets/DemoPortalFact.gif" />
+            </div>
+            <div>
+              <p v-if="!moduloScaled">Eliga un Módulo del Sistema</p>
+            </div>
+          </div>
+          <div v-if="modalContent == 4" class="first-modal-grid">
+            <p>
+              Sistema Telefónico de Información y Costeo, encargado de capturar
+              datos de centrales telefónicas Cisco/Avaya, procesarlos y
+              presentarlos con su correspondiente tarifación de llamadas
+            </p>
+            <img
+              style="margin-left:15%; border-radius:80%"
+              src="@/assets/img/AlphaSystemsLogo.png"
+              alt="Empresa Alpha Systems"
+            />
+            <div>
+              <div class="boxOne">
+                <b>Empresa:</b>
+                <b>Intervención:</b>
+                <b>Rol Cumplido:</b>
+                <b>Tecnologías Empleadas:</b>
+                <b>Base de Datos:</b>
+              </div>
+              <div class="boxTwo">
+                <b>Alpha Systems</b>
+                <b>Completa</b>
+                <b>Backend / FrontEnd</b>
+                <b>Java, C#, Js, .Net Core, Vue, Vuex, Axios, Vuetify</b>
+                <b>MSSQL Server</b>
+              </div>
+            </div>
+            <div>
+              <a class="modulos" @click="modalContent = 4.1">
+                VER MODULOS
+              </a>
+              <a class="back" @click="closePopup">
+                Volver
+              </a>
+            </div>
+          </div>
+          <div v-else-if="modalContent == 4.1" class="first-modal-subgrid">
+            <div
+              :class="scaleActive"
+              @click="moduloScaled = !moduloScaled"
+              :aria-pressed="moduloScaled ? 'true' : 'false'"
+            >
+              <p v-if="!moduloScaled">STIC</p>
+              <img v-else src="@/assets/DemoStic.gif" />
+            </div>
+            <div>
+              <p v-if="!moduloScaled">Eliga un Módulo del Sistema</p>
+            </div>
+          </div>
+          <div v-if="modalContent == 5" class="first-modal-grid">
+            <p>
+              Desarrollo de Módulos para la nacionalización Boliviana de ERP
+              (Facturación Computarizada/ Facturación Electrónica / Reportes
+              Contables/ POS/ Configuración)
+            </p>
+            <img
+              style="margin-left:15%; border-radius:80%"
+              src="@/assets/img/AlphaSystemsLogo.png"
+              alt="Empresa Alpha Systems"
+            />
+            <div>
+              <div class="boxOne">
+                <b>Empresa:</b>
+                <b>Intervención:</b>
+                <b>Rol Cumplido:</b>
+                <b>Tecnologías Empleadas:</b>
+                <b>Base de Datos:</b>
+              </div>
+              <div class="boxTwo">
+                <b>Alpha Systems</b>
+                <b>Completa</b>
+                <b>Backend / FrontEnd</b>
+                <b>Python, JS, Odoo</b>
+                <b>PostgreSQL</b>
+              </div>
+            </div>
+            <div>
+              <a class="modulos" @click="modalContent = 5.1">
+                VER MODULOS
+              </a>
+              <a class="back" @click="closePopup">
+                Volver
+              </a>
+            </div>
+          </div>
+          <div v-else-if="modalContent == 5.1" class="first-modal-subgrid">
+            <div
+              :class="scaleActive"
+              @click="moduloScaled = !moduloScaled"
+              :aria-pressed="moduloScaled ? 'true' : 'false'"
+            >
+              <p v-if="!moduloScaled">Facturación Electrónica</p>
+              <img v-else src="@/assets/DemoOdoo.gif" />
+            </div>
+            <div>
+              <p v-if="!moduloScaled">Eliga un Módulo del Sistema</p>
             </div>
           </div>
         </section>
@@ -345,9 +574,10 @@ a {
   transition: all 0.5s ease;
 }
 .modulo-item-scaled {
+  margin-top: 40%;
   transform: translate(-350px, 10px); /* Standard syntax */
-  width: 22rem;
-  height: 15rem;
+  width: 100rem;
+  height: 20rem;
   border-radius: 0%;
 }
 .modulo-item:hover {
@@ -358,7 +588,7 @@ a {
 .cuerpo {
   padding: 2em;
   background: #333333;
-  height: 500vh;
+  height: 150vh;
   font-family: "Share Tech Mono", monospace;
   text-align: start;
 }

@@ -16,14 +16,15 @@ import FormacionTrabajo from '@/components/PortfolioIdeas/FormacionTrabajo.vue';
 import PortfolioGrid from '@/components/PortfolioIdeas/PortfolioGrid.vue';
 import ContactForm from '@/components/PortfolioIdeas/ContactForm.vue';
 import AboutMe from '@/components/PortfolioIdeas/AboutMe.vue';
+import MainLayout from '@/components/PortfolioIdeas/MainLayout.vue';
 
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
+    name: 'MainLayout',
+    component: MainLayout,
   },
   {
     path: '/about',
