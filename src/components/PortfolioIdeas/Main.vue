@@ -31,19 +31,33 @@
     <div class="content">
       <div id="level1" class="seccion">
         <h1>SECCION 1</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magni temporibus sequi alias, esse laboriosam nam! Placeat, laudantium? Repudiandae, perferendis neque ab sapiente sint inventore fugit tenetur doloremque quod ipsam!</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          magni temporibus sequi alias, esse laboriosam nam! Placeat,
+          laudantium? Repudiandae, perferendis neque ab sapiente sint inventore
+          fugit tenetur doloremque quod ipsam!
+        </p>
       </div>
       <div id="level2" class="seccion">
         <h1>SECCION 2</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, pariatur!</p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem,
+          pariatur!
+        </p>
       </div>
       <div id="level3" class="seccion">
         <h1>SECCION 3</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, pariatur!</p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem,
+          pariatur!
+        </p>
       </div>
       <div id="level4" class="seccion">
         <h1>SECCION 4</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, pariatur!</p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem,
+          pariatur!
+        </p>
       </div>
     </div>
   </div>
@@ -55,9 +69,9 @@ import Component from "vue-class-component";
 @Component
 export default class Main extends vue {
   level1 = this.$el.querySelector("#level1");
-  prueba() {
-    this.level1.scrollTop = this.level1.scrollHeight;
-  }
+  // prueba() {
+  //   this.level1.scrollTop = this.level1.scrollHeight;
+  // }
 }
 </script>
 
